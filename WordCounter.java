@@ -15,7 +15,7 @@ public class WordCounter extends JFrame implements ActionListener {
         setTitle("Word Counter");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLocationRelativeTo(null); // Center the window
+        setLocationRelativeTo(null);
 
         
         textArea = new JTextArea();
