@@ -11,18 +11,18 @@ public class WordCounter extends JFrame implements ActionListener {
     private JLabel resultLabel;
 
     public WordCounter() {
-        // Set frame title
+        
         setTitle("Word Counter");
         setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null); // Center the window
 
-        // Create components
+        
         textArea = new JTextArea();
         countButton = new JButton("Count Words");
         resultLabel = new JLabel("Word Count: 0");
 
-        // Set layout and add components
+        
         setLayout(new BorderLayout());
         add(new JScrollPane(textArea), BorderLayout.CENTER);
 
@@ -32,7 +32,7 @@ public class WordCounter extends JFrame implements ActionListener {
         bottomPanel.add(resultLabel, BorderLayout.CENTER);
         add(bottomPanel, BorderLayout.SOUTH);
 
-        // Add action listener
+        
         countButton.addActionListener(this);
     }
 
@@ -42,7 +42,7 @@ public class WordCounter extends JFrame implements ActionListener {
         if (text.isEmpty()) {
             resultLabel.setText("Word Count: 0");
         } else {
-            // Split by spaces, tabs, newlines
+            
             String[] words = text.split("\\s+");
             resultLabel.setText("Word Count: " + words.length);
         }
